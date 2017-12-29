@@ -1,0 +1,18 @@
+proxy:
+    - forward:
+        pipeline.channel:
+            max: 1024
+        client.elasticsearch:
+            cluster:
+                - "10.21.21.82:9092"
+                - "10.21.21.83:9092"
+                - "10.21.21.84:9092"
+
+    - forward:
+        pipeline.channel:
+            max: 1024
+        client.kafka:
+            broker:
+                - "10.21.21.82:9092"
+                - "10.21.21.83:9092"
+                - "10.21.21.84:9092"
